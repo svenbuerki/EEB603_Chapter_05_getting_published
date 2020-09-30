@@ -1,0 +1,10 @@
+name: "EEB603"
+output_dir: "."
+navbar:
+  title: "Reproducible code"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Teaching material"
+      href: Chapter_5_Getting_published.html
+

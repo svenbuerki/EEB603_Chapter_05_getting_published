@@ -1,0 +1,343 @@
+---
+title: 'EEB603 -- Chapter 5: Getting published'
+author: "Sven Buerki"
+date: "`r Sys.Date()`"
+output:
+  bookdown::html_document2: 
+    toc: TRUE
+    toc_float: TRUE
+link-citations: yes
+fontsize: 12pt
+bibliography: [Bibliography_Reproducible_Science_2.bib, packages.bib]
+csl: AmJBot.csl
+---
+
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE}
+library(knitr)
+library(rmarkdown)
+library(bookdown)
+library(formattable)
+library(kableExtra)
+library(dplyr)
+library(magrittr)
+library(prettydoc)
+library(htmltools)
+library(knitcitations)
+library(devtools)
+
+#Generate BibTex citation file for all R packages used to produce report
+knitr::write_bib(.packages(), file = 'packages.bib')
+```
+
+```{r setup, include=FALSE, cache=FALSE, message = FALSE}
+# Chunk options: see http://yihui.name/knitr/options/ ###
+
+## Text results
+#opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE, include = TRUE)
+
+## Code decoration
+opts_chunk$set(tidy = TRUE, tidy.opts = list(blank = FALSE, width.cutoff = 60), highlight = TRUE)
+
+## Caching code
+opts_chunk$set(cache = 2, cache.path = "cache/")
+
+## Plots
+#opts_chunk$set(fig.path = "Figures_MS/", dev=c('pdf', 'png'), dpi = 300)
+
+## Locate figures as close as possible to requested position (=code)
+knitr::opts_chunk$set(fig.pos = 'H')
+```
+
+# Used literature and web resources
+
+This chapter is mostly based on the following books, publications and web resources:
+
+- @Allen -- Comment published in *Nature* advocating for a “taxonomy” of author roles.
+- @GetPub -- A Guide to Getting Published in Ecology and Evolution published by the [British Ecological Society](https://www.britishecologicalsociety.org).
+- @Margaret_OConnor -- A book entitled "Writing Scientific Research Articles: Strategy and Steps" available to download [here](http://www.idemployee.id.tue.nl/g.w.m.rauterberg/lecturenotes/2009-Writing_Scientific_Research_Articles.pdf).
+- The Committee on Publication Ethics (COPE) website for general information on publishing ethics (http://publicationethics.org/).
+- COPE: The guide entitled "How to handle authorship disputes: a guide for new researchers" available for download here: http://publicationethics.org/files/2003pdf12_0.pdf
+- @Fox2015 -- A publication investigating the relationship between manuscript title structure and success in Ecology.
+- Moore, A. An eBook entitled "Writing Science Well: Techniques, tips and pitfalls" available to download here: http://www.wiley.com/legacy/wileyblackwell/gmspdfs/69204eBookECR/#/1/
+- The Wiley Author Webinars website is full of seminars covering topics such as: How to get published; How to write for scientific publications; Grant funding tips; Understand the peer review process; Improve article/publication discoverability; Ethics in publishing; Open Access; Time management skills. Available here: https://authorservices.wiley.com/author-resources/Journal-Authors/Prepare/webinars/index.html
+
+# Why publish?
+
+**Publishing research results is the one thing that unites scientists across all disciplines**, and it is a necessary part of the scientific process. You can have the best ideas in the world, but if you don't communicate them clearly enough to be published, your work won't be acknowledged by the scientific community.
+
+By publishing you are achieving three key goals for yourself and the larger scientific endeavor:
+
+- Disseminating your research.
+- Advancing your career.
+- Advancing science.
+
+In biology, publishing research is equal to journal articles. 
+
+# Know your message
+
+Before beginning writing your journal article and thinking where to submit it, it is important to thoroughly understand your own research and **know the key conclusion you want to communicate** (see chapter 3). In other words, **what is your take home message?**
+
+Consider your conclusion and ask yourself, is it:
+
+- New and interesting?
+- Contributing to a hot topic?
+- Providing solutions to difficult problems?
+
+If you can answer ‘*yes*’ to all three, you have a good foundation message for a paper.
+
+Shape the whole narrative of your paper around this message.
+
+# Steps towards getting your research published
+
+Once you know your message, getting your research published will be a four steps process:
+
+- Step 1: Selecting your journal.
+- Step 2: Writing your manuscript.
+- Step 3: Submitting your manuscript.
+- Step 4: Acceptance and publication.
+
+Each step will be discussed below. Please seek support from your supervisor to learn more about specifics from you field.
+
+# Step 1: Selecting your journal
+
+To target the best journal to publish your research, you need to ask yourself **what audience do I want my paper to reach?**
+
+Your manuscript should be tailored to the journal you want to submit to in terms of content and in terms of style (as outlined in journals’ author guidelines). To confirm that a journal is the best outlet to publish your research ask yourself this question: can I relate my research to other papers published in this journal?
+
+Here are some things to consider when choosing which journal to submit to:
+
+## Journal aims and scope
+
+Look closely at what the journal publishes; manuscripts are often rejected on the basis that they would be more suitable for another journal. There can be crossover between different journals’ aims and scope – differences may be subtle, but all important when it comes to getting accepted.
+
+Do you want your article read by a more specialist audience working on closely related topics to yours, or researchers within your broader discipline? 
+
+**Once you have decided which journal you are most interested in, make sure that you tailor the article according to its aims and scope.**
+
+## Editors and editorial boards
+
+It’s a good sign if you recognize the names of the editors and editorial board members of a journal from the work you have already encountered (even better if they contributed to some of the references cited in your manuscript). Research who would likely deal with your paper if you submitted to a journal and find someone who would appreciate reading your paper. You can suggest handling editors in your cover letter or in the submission form, if it allows, but be aware that journals do not have to follow your suggestions and/or requests.
+
+## Impact factor and other metrics
+
+Impact factors are the one unambiguous measure widely used to compare journal quality based on citations the journal receives. However, other metrics are becoming more common, e.g. altmetric score measuring the impact of individual articles through online activity (shares on different social media platforms etc.), or article download figures listed next to the published paper. 
+
+None of the metrics described here are an exact measure of the quality of the journal or published research. You will have to decide which of these metrics (if any) matter most to your work or your funders and institutions.
+
+## Open access
+
+Do you need to publish open access (OA)? Some funders mandate it and grant money often has an amount earmarked to cover the article processing charge (APC) required for Gold OA. Some universities have established agreements with publishers whereby their staff get discounts on APCs when publishing in certain journals (or even a quota of manuscripts that can be published for "free" on a yearly basis). If you do not have grant funding, check whether your university or department has got an OA fund that you could tap into. 
+
+However, if you are not mandated to publish OA by your funder and/or you do not have the funds to do so, **your paper will still reach your target audience if you select the right journal for your paper. Remember, you can share your paper over email.**
+
+## Author guidelines
+
+Author guidelines will outline the journal’s requirements for submissions:
+
+- Aims and scope. 
+- Formatting requirements (incl. words limit, numbers of figures, tables, references).
+- Journal policies (e.g. on data sharing and citation).
+
+Always follow the author guidelines, stick to the word limit and tailor your manuscript accordingly. **Remember that papers can be rejected immediately if they do not meet the author guidelines.** 
+
+## Time to publication
+
+The length of time a paper takes to be peer reviewed does not correlate to the quality of peer review, but rather reflects the resources a journal has to manage the process (e.g. do they have paid editorial staff or is it managed by full-time academics?).
+
+Journals usually give their average time to a decision on their website, so take note of this if time is a consideration for you.
+
+Some journals also make it clear that they are reviewing for soundness of science rather than novelty and will therefore often have a faster review process (e.g. *PLoS ONE*).
+
+## Ethics
+
+Ethics can be divided into two groups: 
+
+- **Research ethics:** this term includes aspects such as how you manage sensitive species information, whether you adhere to animal welfare guidelines and regulations or how you deal with data protection. 
+- **Publication ethics:** this term concerns practices around the publication process. Standards set across scholarly publishing help define good practice and identify cases of misconduct. The Committee on Publication Ethics (COPE) provides the main forum for advice on ethics within scholarly publishing and has issued several sets of guidelines that help journals, editors and publishers handle cases of misconduct such as data fabrication, peer review fraud, plagiarism, etc. 
+
+As an author, it helps if you are familiar with what constitutes good practices and what is considered unacceptable. Please see section "Used literature & web resources" for more details on this topic.
+
+## Authorship
+
+Start talking about authorship and author order for your paper with collaborators at an early stage – before submitting and ideally before writing the paper. To deal with potential issues, ask yourself the question: **Who will do what?**
+
+Some journals are now encouraging ‘authorship contribution statements’ so check the journal guidelines to see if this is required and how to format it. Here is an example of an author contributions paragraph:
+
+*F.F., N.A.B. and S.B. designed study; F.F., E.B., S.P.B., J.M., and S.B. compiled data; F.F., S.B. and J.M. performed analyses; S.I.B., P.M.H., A.L., D.P.L., S.M., H.R., C.R., D.W.S., and P.T. provided material and/or sequences; F.F., J.M. and S.B. wrote the manuscript; all authors critically read and revised the manuscript, and approved the final submitted version.*
+
+# Step 2: Writing your manuscript
+
+## Planning to write
+
+Develop a narrative that leads to your main conclusion and develop a backbone around that narrative. The narrative should progress logically, which does not necessarily mean chronologically. Work out approximate word counts for each section to help manage the article structure and keep you on track for word limits.
+
+It is important to **set aside enough time to write your manuscript and – importantly – enough time to edit**, which may actually take longer than the writing itself.
+
+## Structure
+
+The article structure will be defined in the author guidelines, but if the journal’s guidelines permit it, there may be scope to use your own subheadings. **By breaking down your manuscript into smaller sections, you will be communicating your message in a much more digestible form.**
+
+Use subheadings to shape your narrative and write each subheading in statement form (e.g. ecological variables do not predict genome size variation).
+
+## Title
+
+**The title is the most visible part of your paper and it should thus clearly communicates your key message.** Pre-publication, reviewers base their decision on whether to review a paper on the quality of the title and abstract. Post-publication, if you publish in a subscription journal and not OA, the title and abstract are the only freely available parts of your paper, which will turn up in search engines and thus reach the widest audience. **A good title will help you get citations and may even be picked up by the press.**
+
+Draft a title before you write your manuscript to help focusing your paper. The title needs to be informative and interesting to make it stand out to reviewers and subsequently readers. Some key tips for a successful title include:
+
+- **Write it in statement form.** When scanning papers, most people skip to the last sentence of the abstract to look for the key message, so make that sentence your title.
+- **Keep it around 15 words** – any longer or shorter and it has more chance of being rejected at peer review.
+- **Use punctuation to split the main message** and qualifier/subtitle e.g. ‘Feeding evolution of a herbivore influences an arthropod community through plants: implications for plant-mediated eco-evolutionary feedback loop’.
+- **Keep it general** – readers prefer titles that emphasize broader conceptual or comparative issues, and these titles fare better both pre- and post-publication than papers with organism-specific titles. Try to avoid using species names, put them in the abstract and keywords instead.
+- **Do not use abbreviations** even if they are familiar in your field. You should keep a broad audience in mind.
+- Do not use phrases such as ‘The effect of...’, ‘The involvement of...’. These phrases give the reader scope to question your message – instead tell the reader what they are being told.
+
+## Abstract
+
+**Write your abstract after you have written your paper, when you are fully aware of the narrative of your paper.** After the title, the abstract is the most read part of your paper. Abstracts are freely available and affect how discoverable your article is via search engines. 
+
+Given its importance, your abstract should:
+
+- Articulate your new and interesting key message.
+- Outline the methods and results.
+- Contextualize the work.
+- Highlight how your research contributes to the field and its future implications.
+- Have the last sentence communicating the key message.
+
+## Writing style
+
+**Writing with clarity, simplicity and accuracy** takes practice and we can all get carried away with what we think is ‘academic writing’ (i.e. long words and jargon) but good science speaks for itself. Write short sentences (ca. 12 words on average).
+
+**Every extra word you write is another word for a reviewer to disagree with.** Single out the narrative that leads to your main conclusion and write that – it is easy to get side tracked with lots of interesting avenues distracting from your work, but by including those in your paper, you are inviting more criticism from reviewers.
+
+Write in an active, positive voice (e.g. ‘we found this...’ ‘we did this...’) and be direct so that your message is clear. Ambiguous writing is another invitation for reviewers to disagree with you.
+
+In your introduction, state that **your research is timely, important, and why**. Begin each section with that section’s key message and end each section with that message again plus further implications. This will place your work in the broader context that high-quality journals like.
+
+Draft and redraft your work to ensure it flows well and your message is clear and focused throughout. While doing this process, keep the reader in mind at all times (to have a critical look on your research and its presentation).
+
+## Keywords
+
+Keywords are used by readers to discover your paper. You will increase chances of your paper being discovered through search engines by using them strategically throughout your paper – this is search engine optimization (SEO). 
+
+Think of the words you would search for to bring up your paper in a Google search. Try it and see what comes up – are there papers that cover similar research to your own?
+
+Build up a list of 15–20 terms relevant to your paper and divide them into two groups: 
+
+- A core group of around 5 keywords, 
+- A larger group of secondary keywords. 
+
+Place your core keywords in the title, abstract and subheadings, and the secondary keywords throughout the text and in figures and tables. Repeat keywords in the abstract and text naturally.
+
+## References
+
+Reference all sources and do it as you go along (e.g. copy the BibTeX citation into a reference file; see chapter 1 part B), then tidy them once the paper is complete. 
+
+Make sure that most of your references are recent to demonstrate both that you have a good understanding of current literature, and that your research is relevant to current topics.
+
+## Figures and tables
+
+**Figures and tables enhance your paper by communicating results or data concisely** (more on this topic in chapters 9 and 10). 
+
+Use figures and tables to maintain the flow of your narrative – e.g. instead of trying to describe patterns in your results, create a figure and say ‘see Fig. 1’. Not only does this keep your word count down, but a well-designed figure can replace 1000 words! 
+
+Figures are useful for communicating overall trends and shapes, allowing simple comparisons between fewer elements. Tables should be used to display precise data values that require comparisons between many different elements.
+
+Figure captions and table titles should explain what is presented and highlight the key message of this part of your narrative – the figure/table and its caption/title should be understandable in isolation from the rest of your manuscript.
+
+Check the journal’s author guidelines for details on table and figure formatting, appropriate file types, number of tables and figures allowed and any other specifications that may apply. Material presented in chapter 1 part C can help you produce figures meeting journal expectations.
+
+## Editing
+
+Once you have finished writing your manuscript, put it on ice for a week so you come back to it with fresh eyes. Take your time to read it through. Editing can take more time than you expect, but this is your opportunity to fine-tune and submit the best paper possible. Don't hesitate to seek support from your thesis committee to fasten and streamline this process.
+
+Key things to look out for when editing include:
+
+- Spelling and grammar – a surprising amount of errors slip through. If you are a non-native English speaker, ask a native speaker, ideally a colleague who knows a little bit about the subject, to read it through, or use a language-editing service if you have the funds to do so.
+- Make sure all statements and assumptions are explained.
+- Remove redundant words or phrases – keep it concise and jargon-free to avoid diluting your message.
+- Abbreviations – check that they have been expanded on the first use.
+- Acknowledgements – make sure all funders are clearly mentioned and that all people who contributed in any way are acknowledged.
+- Keywords – they should be consistent, evenly spaced throughout the text and placed at key points in your manuscript e.g. subheadings.
+- Make sure you have specifically dealt with the hypothesis set out in the introduction – you’d be surprised at the number of papers submitted that don’t!
+- Circulate the manuscript to your co-authors to get their comments and final approval before submission.
+
+# Step 3: Submitting your manuscript
+
+You are now ready to submit your paper to your chosen journal. Each journal will have a different submission procedure that you will have to adhere to, and most manage their submissions through online submission systems (e.g. ScholarOne Manuscripts). 
+
+**Only submit your paper for consideration to one journal at a time** otherwise you will be breaching publishing ethics.
+
+## Cover letters
+
+A great cover letter can set the stage towards convincing editors to send your paper for review. Write a concise and engaging letter addressed to the editor-in-chief, who may not be an expert in your field or sub-field. 
+
+The following points should be covered in your cover letter:
+
+- State your key message and why your paper is important and relevant to the journal.
+- State that your paper is not under review in another journal and hasn’t been published before (although you will most likely adhere to that during the submission process and if it is the case you then don't need to mention this in the cover letter).
+- The cover letter should be shorter than your abstract and be written in less technical language.
+- Use it to recommend reviewers (include their emails) and/or a relevant handling editor. Pick suggested reviewers with a good reputation to demonstrate both your knowledge of the field and your belief that your paper can stand up to their scrutiny.
+- State any potential conflict of interest with other teams and blacklist potential reviewers. 
+
+## Handling revisions
+
+Very rarely is a paper immediately accepted – almost all papers go through few rounds of reviews before they get published. 
+
+If a decision comes back asking for revisions you should reply to all comments politely. Here are some tips on handling reviewer comments and revising your paper:
+
+- Look at the reviewer comments with scrutiny and make a list of all the points that need to be addressed.
+- Start with the minor revisions such as spelling, grammar, inconsistencies – these are often the most numerous but the easiest to correct.
+- If you disagree with certain comments, disagree politely and with evidence. Do not skip over them when writing your reply.
+- If things can’t be dealt with in this paper then explain that to the editor – reviewers may try to push their own agenda e.g. ‘why don’t you write this paper instead’, but you have the right to disagree if you don’t feel it is appropriate to deal with this in your paper.
+- Respond to comments as thoroughly as you can.
+- Include a point-by-point response to the reviewer comments in the relevant section of the online system.
+
+## Handling rejection
+
+Reviewers are volunteers, but the service they provide is invaluable – by undergoing peer review, regardless of the outcome, you are receiving some of the best advice from leading experts for free. With this in mind, any feedback you get will be constructive in the end and will lead you on the way to a successful publishing portfolio. 
+
+Keep in mind that **feedback is another person’s opinion on what you have done, not on who you are**, and it is up to you to decide what to do with it.
+
+If your paper is rejected look at the reviewer’s comments and use their feedback to improve your paper before resubmitting it.
+
+## Appeals
+
+If you are unhappy with a reject decision, 99.9% of the time, move on. However, don’t be afraid of appealing if you have well-founded concerns or think that the reviewers have done a bad job. There are instances where journals grant your appeal and allow you to revise your paper, but in the large majority of cases, the decision to reject will be upheld.
+
+# Step 4: Acceptance and publication
+
+Congratulations! By now you should have an acceptance email from the editor-in-chief in your inbox. The process from here will vary according to each journal, but the post-acceptance workflow is usually as follows:
+
+- Your paper will be published online, unedited, but citable as an ‘Accepted Article’ within a week of acceptance (usually a DOI is assigned and your paper is citable at this stage).
+- Your paper will be copy-edited. The level of copy-editing your paper will receive will vary according to each journal, so it is worth checking your proof thoroughly.
+- Your paper will be typeset and a proof will be sent to you for checking. Author queries will be marked on the proof. At this stage, only minor corrections related to the typesetting are allowed.
+- Your finalized proof will be published online in ‘Early View’.
+- Finally, according to the journal’s schedule, your paper will be placed in an issue (or not if it is an online only journal, e.g. *Scientific Reports*).
+
+It might be then time to coordinate the publication of a press release or post the link of your article on social media to share your joy!
+
+# References
+
+<div id="refs"></div>
+
+# (APPENDIX) Appendix {-}
+
+# Appendix 1
+
+Citations of all R packages used to generate this report. 
+
+```{r generateBibliography, results="asis", echo=TRUE, warning = FALSE, message=FALSE}
+library("knitcitations")
+cleanbib()
+options("citation_format" = "pandoc")
+read.bibtex(file = "packages.bib")
+``` 
+
+# Appendix 2
+
+Version information about R, the operating system (OS) and attached or R loaded packages. This appendix was generated using `sessionInfo()`.
+
+```{r eval=T, echo=F, warning = FALSE, message=FALSE}
+sessionInfo()
+```

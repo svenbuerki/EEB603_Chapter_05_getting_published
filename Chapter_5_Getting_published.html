@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Sven Buerki" />
+
+<meta name="date" content="2020-09-30" />
+
+<title>EEB603 – Chapter 5: Getting published</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Reproducible code</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Chapter_5_Getting_published.html">Teaching material</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">EEB603 – Chapter 5: Getting published</h1>
+<h4 class="author">Sven Buerki</h4>
+<h4 class="date">2020-09-30</h4>
+
+</div>
+
+
+<div id="used-literature-and-web-resources" class="section level1">
+<h1><span class="header-section-number">1</span> Used literature and web resources</h1>
+<p>This chapter is mostly based on the following books, publications and web resources:</p>
+<ul>
+<li><span class="citation">Allen et al. (<a href="#ref-Allen">2014</a>)</span> – Comment published in <em>Nature</em> advocating for a “taxonomy” of author roles.</li>
+<li><span class="citation">British Ecological Society (<a href="#ref-GetPub">2014</a>)</span> – A Guide to Getting Published in Ecology and Evolution published by the <a href="https://www.britishecologicalsociety.org">British Ecological Society</a>.</li>
+<li><span class="citation">Cargill and O’Connor (<a href="#ref-Margaret_OConnor">2011</a>)</span> – A book entitled “Writing Scientific Research Articles: Strategy and Steps” available to download <a href="http://www.idemployee.id.tue.nl/g.w.m.rauterberg/lecturenotes/2009-Writing_Scientific_Research_Articles.pdf">here</a>.</li>
+<li>The Committee on Publication Ethics (COPE) website for general information on publishing ethics (<a href="http://publicationethics.org/" class="uri">http://publicationethics.org/</a>).</li>
+<li>COPE: The guide entitled “How to handle authorship disputes: a guide for new researchers” available for download here: <a href="http://publicationethics.org/files/2003pdf12_0.pdf" class="uri">http://publicationethics.org/files/2003pdf12_0.pdf</a></li>
+<li><span class="citation">Fox and Burns (<a href="#ref-Fox2015">2015</a>)</span> – A publication investigating the relationship between manuscript title structure and success in Ecology.</li>
+<li>Moore, A. An eBook entitled “Writing Science Well: Techniques, tips and pitfalls” available to download here: <a href="http://www.wiley.com/legacy/wileyblackwell/gmspdfs/69204eBookECR/#/1/" class="uri">http://www.wiley.com/legacy/wileyblackwell/gmspdfs/69204eBookECR/#/1/</a></li>
+<li>The Wiley Author Webinars website is full of seminars covering topics such as: How to get published; How to write for scientific publications; Grant funding tips; Understand the peer review process; Improve article/publication discoverability; Ethics in publishing; Open Access; Time management skills. Available here: <a href="https://authorservices.wiley.com/author-resources/Journal-Authors/Prepare/webinars/index.html" class="uri">https://authorservices.wiley.com/author-resources/Journal-Authors/Prepare/webinars/index.html</a></li>
+</ul>
+</div>
+<div id="why-publish" class="section level1">
+<h1><span class="header-section-number">2</span> Why publish?</h1>
+<p><strong>Publishing research results is the one thing that unites scientists across all disciplines</strong>, and it is a necessary part of the scientific process. You can have the best ideas in the world, but if you don’t communicate them clearly enough to be published, your work won’t be acknowledged by the scientific community.</p>
+<p>By publishing you are achieving three key goals for yourself and the larger scientific endeavor:</p>
+<ul>
+<li>Disseminating your research.</li>
+<li>Advancing your career.</li>
+<li>Advancing science.</li>
+</ul>
+<p>In biology, publishing research is equal to journal articles.</p>
+</div>
+<div id="know-your-message" class="section level1">
+<h1><span class="header-section-number">3</span> Know your message</h1>
+<p>Before beginning writing your journal article and thinking where to submit it, it is important to thoroughly understand your own research and <strong>know the key conclusion you want to communicate</strong> (see chapter 3). In other words, <strong>what is your take home message?</strong></p>
+<p>Consider your conclusion and ask yourself, is it:</p>
+<ul>
+<li>New and interesting?</li>
+<li>Contributing to a hot topic?</li>
+<li>Providing solutions to difficult problems?</li>
+</ul>
+<p>If you can answer ‘<em>yes</em>’ to all three, you have a good foundation message for a paper.</p>
+<p>Shape the whole narrative of your paper around this message.</p>
+</div>
+<div id="steps-towards-getting-your-research-published" class="section level1">
+<h1><span class="header-section-number">4</span> Steps towards getting your research published</h1>
+<p>Once you know your message, getting your research published will be a four steps process:</p>
+<ul>
+<li>Step 1: Selecting your journal.</li>
+<li>Step 2: Writing your manuscript.</li>
+<li>Step 3: Submitting your manuscript.</li>
+<li>Step 4: Acceptance and publication.</li>
+</ul>
+<p>Each step will be discussed below. Please seek support from your supervisor to learn more about specifics from you field.</p>
+</div>
+<div id="step-1-selecting-your-journal" class="section level1">
+<h1><span class="header-section-number">5</span> Step 1: Selecting your journal</h1>
+<p>To target the best journal to publish your research, you need to ask yourself <strong>what audience do I want my paper to reach?</strong></p>
+<p>Your manuscript should be tailored to the journal you want to submit to in terms of content and in terms of style (as outlined in journals’ author guidelines). To confirm that a journal is the best outlet to publish your research ask yourself this question: can I relate my research to other papers published in this journal?</p>
+<p>Here are some things to consider when choosing which journal to submit to:</p>
+<div id="journal-aims-and-scope" class="section level2">
+<h2><span class="header-section-number">5.1</span> Journal aims and scope</h2>
+<p>Look closely at what the journal publishes; manuscripts are often rejected on the basis that they would be more suitable for another journal. There can be crossover between different journals’ aims and scope – differences may be subtle, but all important when it comes to getting accepted.</p>
+<p>Do you want your article read by a more specialist audience working on closely related topics to yours, or researchers within your broader discipline?</p>
+<p><strong>Once you have decided which journal you are most interested in, make sure that you tailor the article according to its aims and scope.</strong></p>
+</div>
+<div id="editors-and-editorial-boards" class="section level2">
+<h2><span class="header-section-number">5.2</span> Editors and editorial boards</h2>
+<p>It’s a good sign if you recognize the names of the editors and editorial board members of a journal from the work you have already encountered (even better if they contributed to some of the references cited in your manuscript). Research who would likely deal with your paper if you submitted to a journal and find someone who would appreciate reading your paper. You can suggest handling editors in your cover letter or in the submission form, if it allows, but be aware that journals do not have to follow your suggestions and/or requests.</p>
+</div>
+<div id="impact-factor-and-other-metrics" class="section level2">
+<h2><span class="header-section-number">5.3</span> Impact factor and other metrics</h2>
+<p>Impact factors are the one unambiguous measure widely used to compare journal quality based on citations the journal receives. However, other metrics are becoming more common, e.g. altmetric score measuring the impact of individual articles through online activity (shares on different social media platforms etc.), or article download figures listed next to the published paper.</p>
+<p>None of the metrics described here are an exact measure of the quality of the journal or published research. You will have to decide which of these metrics (if any) matter most to your work or your funders and institutions.</p>
+</div>
+<div id="open-access" class="section level2">
+<h2><span class="header-section-number">5.4</span> Open access</h2>
+<p>Do you need to publish open access (OA)? Some funders mandate it and grant money often has an amount earmarked to cover the article processing charge (APC) required for Gold OA. Some universities have established agreements with publishers whereby their staff get discounts on APCs when publishing in certain journals (or even a quota of manuscripts that can be published for “free” on a yearly basis). If you do not have grant funding, check whether your university or department has got an OA fund that you could tap into.</p>
+<p>However, if you are not mandated to publish OA by your funder and/or you do not have the funds to do so, <strong>your paper will still reach your target audience if you select the right journal for your paper. Remember, you can share your paper over email.</strong></p>
+</div>
+<div id="author-guidelines" class="section level2">
+<h2><span class="header-section-number">5.5</span> Author guidelines</h2>
+<p>Author guidelines will outline the journal’s requirements for submissions:</p>
+<ul>
+<li>Aims and scope.</li>
+<li>Formatting requirements (incl. words limit, numbers of figures, tables, references).</li>
+<li>Journal policies (e.g. on data sharing and citation).</li>
+</ul>
+<p>Always follow the author guidelines, stick to the word limit and tailor your manuscript accordingly. <strong>Remember that papers can be rejected immediately if they do not meet the author guidelines.</strong></p>
+</div>
+<div id="time-to-publication" class="section level2">
+<h2><span class="header-section-number">5.6</span> Time to publication</h2>
+<p>The length of time a paper takes to be peer reviewed does not correlate to the quality of peer review, but rather reflects the resources a journal has to manage the process (e.g. do they have paid editorial staff or is it managed by full-time academics?).</p>
+<p>Journals usually give their average time to a decision on their website, so take note of this if time is a consideration for you.</p>
+<p>Some journals also make it clear that they are reviewing for soundness of science rather than novelty and will therefore often have a faster review process (e.g. <em>PLoS ONE</em>).</p>
+</div>
+<div id="ethics" class="section level2">
+<h2><span class="header-section-number">5.7</span> Ethics</h2>
+<p>Ethics can be divided into two groups:</p>
+<ul>
+<li><strong>Research ethics:</strong> this term includes aspects such as how you manage sensitive species information, whether you adhere to animal welfare guidelines and regulations or how you deal with data protection.</li>
+<li><strong>Publication ethics:</strong> this term concerns practices around the publication process. Standards set across scholarly publishing help define good practice and identify cases of misconduct. The Committee on Publication Ethics (COPE) provides the main forum for advice on ethics within scholarly publishing and has issued several sets of guidelines that help journals, editors and publishers handle cases of misconduct such as data fabrication, peer review fraud, plagiarism, etc.</li>
+</ul>
+<p>As an author, it helps if you are familiar with what constitutes good practices and what is considered unacceptable. Please see section “Used literature &amp; web resources” for more details on this topic.</p>
+</div>
+<div id="authorship" class="section level2">
+<h2><span class="header-section-number">5.8</span> Authorship</h2>
+<p>Start talking about authorship and author order for your paper with collaborators at an early stage – before submitting and ideally before writing the paper. To deal with potential issues, ask yourself the question: <strong>Who will do what?</strong></p>
+<p>Some journals are now encouraging ‘authorship contribution statements’ so check the journal guidelines to see if this is required and how to format it. Here is an example of an author contributions paragraph:</p>
+<p><em>F.F., N.A.B. and S.B. designed study; F.F., E.B., S.P.B., J.M., and S.B. compiled data; F.F., S.B. and J.M. performed analyses; S.I.B., P.M.H., A.L., D.P.L., S.M., H.R., C.R., D.W.S., and P.T. provided material and/or sequences; F.F., J.M. and S.B. wrote the manuscript; all authors critically read and revised the manuscript, and approved the final submitted version.</em></p>
+</div>
+</div>
+<div id="step-2-writing-your-manuscript" class="section level1">
+<h1><span class="header-section-number">6</span> Step 2: Writing your manuscript</h1>
+<div id="planning-to-write" class="section level2">
+<h2><span class="header-section-number">6.1</span> Planning to write</h2>
+<p>Develop a narrative that leads to your main conclusion and develop a backbone around that narrative. The narrative should progress logically, which does not necessarily mean chronologically. Work out approximate word counts for each section to help manage the article structure and keep you on track for word limits.</p>
+<p>It is important to <strong>set aside enough time to write your manuscript and – importantly – enough time to edit</strong>, which may actually take longer than the writing itself.</p>
+</div>
+<div id="structure" class="section level2">
+<h2><span class="header-section-number">6.2</span> Structure</h2>
+<p>The article structure will be defined in the author guidelines, but if the journal’s guidelines permit it, there may be scope to use your own subheadings. <strong>By breaking down your manuscript into smaller sections, you will be communicating your message in a much more digestible form.</strong></p>
+<p>Use subheadings to shape your narrative and write each subheading in statement form (e.g. ecological variables do not predict genome size variation).</p>
+</div>
+<div id="title" class="section level2">
+<h2><span class="header-section-number">6.3</span> Title</h2>
+<p><strong>The title is the most visible part of your paper and it should thus clearly communicates your key message.</strong> Pre-publication, reviewers base their decision on whether to review a paper on the quality of the title and abstract. Post-publication, if you publish in a subscription journal and not OA, the title and abstract are the only freely available parts of your paper, which will turn up in search engines and thus reach the widest audience. <strong>A good title will help you get citations and may even be picked up by the press.</strong></p>
+<p>Draft a title before you write your manuscript to help focusing your paper. The title needs to be informative and interesting to make it stand out to reviewers and subsequently readers. Some key tips for a successful title include:</p>
+<ul>
+<li><strong>Write it in statement form.</strong> When scanning papers, most people skip to the last sentence of the abstract to look for the key message, so make that sentence your title.</li>
+<li><strong>Keep it around 15 words</strong> – any longer or shorter and it has more chance of being rejected at peer review.</li>
+<li><strong>Use punctuation to split the main message</strong> and qualifier/subtitle e.g. ‘Feeding evolution of a herbivore influences an arthropod community through plants: implications for plant-mediated eco-evolutionary feedback loop’.</li>
+<li><strong>Keep it general</strong> – readers prefer titles that emphasize broader conceptual or comparative issues, and these titles fare better both pre- and post-publication than papers with organism-specific titles. Try to avoid using species names, put them in the abstract and keywords instead.</li>
+<li><strong>Do not use abbreviations</strong> even if they are familiar in your field. You should keep a broad audience in mind.</li>
+<li>Do not use phrases such as ‘The effect of…’, ‘The involvement of…’. These phrases give the reader scope to question your message – instead tell the reader what they are being told.</li>
+</ul>
+</div>
+<div id="abstract" class="section level2">
+<h2><span class="header-section-number">6.4</span> Abstract</h2>
+<p><strong>Write your abstract after you have written your paper, when you are fully aware of the narrative of your paper.</strong> After the title, the abstract is the most read part of your paper. Abstracts are freely available and affect how discoverable your article is via search engines.</p>
+<p>Given its importance, your abstract should:</p>
+<ul>
+<li>Articulate your new and interesting key message.</li>
+<li>Outline the methods and results.</li>
+<li>Contextualize the work.</li>
+<li>Highlight how your research contributes to the field and its future implications.</li>
+<li>Have the last sentence communicating the key message.</li>
+</ul>
+</div>
+<div id="writing-style" class="section level2">
+<h2><span class="header-section-number">6.5</span> Writing style</h2>
+<p><strong>Writing with clarity, simplicity and accuracy</strong> takes practice and we can all get carried away with what we think is ‘academic writing’ (i.e. long words and jargon) but good science speaks for itself. Write short sentences (ca. 12 words on average).</p>
+<p><strong>Every extra word you write is another word for a reviewer to disagree with.</strong> Single out the narrative that leads to your main conclusion and write that – it is easy to get side tracked with lots of interesting avenues distracting from your work, but by including those in your paper, you are inviting more criticism from reviewers.</p>
+<p>Write in an active, positive voice (e.g. ‘we found this…’ ‘we did this…’) and be direct so that your message is clear. Ambiguous writing is another invitation for reviewers to disagree with you.</p>
+<p>In your introduction, state that <strong>your research is timely, important, and why</strong>. Begin each section with that section’s key message and end each section with that message again plus further implications. This will place your work in the broader context that high-quality journals like.</p>
+<p>Draft and redraft your work to ensure it flows well and your message is clear and focused throughout. While doing this process, keep the reader in mind at all times (to have a critical look on your research and its presentation).</p>
+</div>
+<div id="keywords" class="section level2">
+<h2><span class="header-section-number">6.6</span> Keywords</h2>
+<p>Keywords are used by readers to discover your paper. You will increase chances of your paper being discovered through search engines by using them strategically throughout your paper – this is search engine optimization (SEO).</p>
+<p>Think of the words you would search for to bring up your paper in a Google search. Try it and see what comes up – are there papers that cover similar research to your own?</p>
+<p>Build up a list of 15–20 terms relevant to your paper and divide them into two groups:</p>
+<ul>
+<li>A core group of around 5 keywords,</li>
+<li>A larger group of secondary keywords.</li>
+</ul>
+<p>Place your core keywords in the title, abstract and subheadings, and the secondary keywords throughout the text and in figures and tables. Repeat keywords in the abstract and text naturally.</p>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">6.7</span> References</h2>
+<p>Reference all sources and do it as you go along (e.g. copy the BibTeX citation into a reference file; see chapter 1 part B), then tidy them once the paper is complete.</p>
+<p>Make sure that most of your references are recent to demonstrate both that you have a good understanding of current literature, and that your research is relevant to current topics.</p>
+</div>
+<div id="figures-and-tables" class="section level2">
+<h2><span class="header-section-number">6.8</span> Figures and tables</h2>
+<p><strong>Figures and tables enhance your paper by communicating results or data concisely</strong> (more on this topic in chapters 9 and 10).</p>
+<p>Use figures and tables to maintain the flow of your narrative – e.g. instead of trying to describe patterns in your results, create a figure and say ‘see Fig. 1’. Not only does this keep your word count down, but a well-designed figure can replace 1000 words!</p>
+<p>Figures are useful for communicating overall trends and shapes, allowing simple comparisons between fewer elements. Tables should be used to display precise data values that require comparisons between many different elements.</p>
+<p>Figure captions and table titles should explain what is presented and highlight the key message of this part of your narrative – the figure/table and its caption/title should be understandable in isolation from the rest of your manuscript.</p>
+<p>Check the journal’s author guidelines for details on table and figure formatting, appropriate file types, number of tables and figures allowed and any other specifications that may apply. Material presented in chapter 1 part C can help you produce figures meeting journal expectations.</p>
+</div>
+<div id="editing" class="section level2">
+<h2><span class="header-section-number">6.9</span> Editing</h2>
+<p>Once you have finished writing your manuscript, put it on ice for a week so you come back to it with fresh eyes. Take your time to read it through. Editing can take more time than you expect, but this is your opportunity to fine-tune and submit the best paper possible. Don’t hesitate to seek support from your thesis committee to fasten and streamline this process.</p>
+<p>Key things to look out for when editing include:</p>
+<ul>
+<li>Spelling and grammar – a surprising amount of errors slip through. If you are a non-native English speaker, ask a native speaker, ideally a colleague who knows a little bit about the subject, to read it through, or use a language-editing service if you have the funds to do so.</li>
+<li>Make sure all statements and assumptions are explained.</li>
+<li>Remove redundant words or phrases – keep it concise and jargon-free to avoid diluting your message.</li>
+<li>Abbreviations – check that they have been expanded on the first use.</li>
+<li>Acknowledgements – make sure all funders are clearly mentioned and that all people who contributed in any way are acknowledged.</li>
+<li>Keywords – they should be consistent, evenly spaced throughout the text and placed at key points in your manuscript e.g. subheadings.</li>
+<li>Make sure you have specifically dealt with the hypothesis set out in the introduction – you’d be surprised at the number of papers submitted that don’t!</li>
+<li>Circulate the manuscript to your co-authors to get their comments and final approval before submission.</li>
+</ul>
+</div>
+</div>
+<div id="step-3-submitting-your-manuscript" class="section level1">
+<h1><span class="header-section-number">7</span> Step 3: Submitting your manuscript</h1>
+<p>You are now ready to submit your paper to your chosen journal. Each journal will have a different submission procedure that you will have to adhere to, and most manage their submissions through online submission systems (e.g. ScholarOne Manuscripts).</p>
+<p><strong>Only submit your paper for consideration to one journal at a time</strong> otherwise you will be breaching publishing ethics.</p>
+<div id="cover-letters" class="section level2">
+<h2><span class="header-section-number">7.1</span> Cover letters</h2>
+<p>A great cover letter can set the stage towards convincing editors to send your paper for review. Write a concise and engaging letter addressed to the editor-in-chief, who may not be an expert in your field or sub-field.</p>
+<p>The following points should be covered in your cover letter:</p>
+<ul>
+<li>State your key message and why your paper is important and relevant to the journal.</li>
+<li>State that your paper is not under review in another journal and hasn’t been published before (although you will most likely adhere to that during the submission process and if it is the case you then don’t need to mention this in the cover letter).</li>
+<li>The cover letter should be shorter than your abstract and be written in less technical language.</li>
+<li>Use it to recommend reviewers (include their emails) and/or a relevant handling editor. Pick suggested reviewers with a good reputation to demonstrate both your knowledge of the field and your belief that your paper can stand up to their scrutiny.</li>
+<li>State any potential conflict of interest with other teams and blacklist potential reviewers.</li>
+</ul>
+</div>
+<div id="handling-revisions" class="section level2">
+<h2><span class="header-section-number">7.2</span> Handling revisions</h2>
+<p>Very rarely is a paper immediately accepted – almost all papers go through few rounds of reviews before they get published.</p>
+<p>If a decision comes back asking for revisions you should reply to all comments politely. Here are some tips on handling reviewer comments and revising your paper:</p>
+<ul>
+<li>Look at the reviewer comments with scrutiny and make a list of all the points that need to be addressed.</li>
+<li>Start with the minor revisions such as spelling, grammar, inconsistencies – these are often the most numerous but the easiest to correct.</li>
+<li>If you disagree with certain comments, disagree politely and with evidence. Do not skip over them when writing your reply.</li>
+<li>If things can’t be dealt with in this paper then explain that to the editor – reviewers may try to push their own agenda e.g. ‘why don’t you write this paper instead’, but you have the right to disagree if you don’t feel it is appropriate to deal with this in your paper.</li>
+<li>Respond to comments as thoroughly as you can.</li>
+<li>Include a point-by-point response to the reviewer comments in the relevant section of the online system.</li>
+</ul>
+</div>
+<div id="handling-rejection" class="section level2">
+<h2><span class="header-section-number">7.3</span> Handling rejection</h2>
+<p>Reviewers are volunteers, but the service they provide is invaluable – by undergoing peer review, regardless of the outcome, you are receiving some of the best advice from leading experts for free. With this in mind, any feedback you get will be constructive in the end and will lead you on the way to a successful publishing portfolio.</p>
+<p>Keep in mind that <strong>feedback is another person’s opinion on what you have done, not on who you are</strong>, and it is up to you to decide what to do with it.</p>
+<p>If your paper is rejected look at the reviewer’s comments and use their feedback to improve your paper before resubmitting it.</p>
+</div>
+<div id="appeals" class="section level2">
+<h2><span class="header-section-number">7.4</span> Appeals</h2>
+<p>If you are unhappy with a reject decision, 99.9% of the time, move on. However, don’t be afraid of appealing if you have well-founded concerns or think that the reviewers have done a bad job. There are instances where journals grant your appeal and allow you to revise your paper, but in the large majority of cases, the decision to reject will be upheld.</p>
+</div>
+</div>
+<div id="step-4-acceptance-and-publication" class="section level1">
+<h1><span class="header-section-number">8</span> Step 4: Acceptance and publication</h1>
+<p>Congratulations! By now you should have an acceptance email from the editor-in-chief in your inbox. The process from here will vary according to each journal, but the post-acceptance workflow is usually as follows:</p>
+<ul>
+<li>Your paper will be published online, unedited, but citable as an ‘Accepted Article’ within a week of acceptance (usually a DOI is assigned and your paper is citable at this stage).</li>
+<li>Your paper will be copy-edited. The level of copy-editing your paper will receive will vary according to each journal, so it is worth checking your proof thoroughly.</li>
+<li>Your paper will be typeset and a proof will be sent to you for checking. Author queries will be marked on the proof. At this stage, only minor corrections related to the typesetting are allowed.</li>
+<li>Your finalized proof will be published online in ‘Early View’.</li>
+<li>Finally, according to the journal’s schedule, your paper will be placed in an issue (or not if it is an online only journal, e.g. <em>Scientific Reports</em>).</li>
+</ul>
+<p>It might be then time to coordinate the publication of a press release or post the link of your article on social media to share your joy!</p>
+</div>
+<div id="references-1" class="section level1">
+<h1><span class="header-section-number">9</span> References</h1>
+<div id="refs">
+<div id="ref-Allen">
+<p><span class="smallcaps">Allen, L.</span>, <span class="smallcaps">J. Scott</span>, <span class="smallcaps">A. Brand</span>, <span class="smallcaps">M. Hlava</span>, and <span class="smallcaps">M. Altman</span>. 2014. Publishing: Credit where credit is due. <em>Nature</em> 508: 312–313.</p>
+</div>
+<div id="ref-GetPub">
+<p><span class="smallcaps">British Ecological Society</span> ed.. 2014. A guide to getting published in ecology and evolution. British Ecological Society.</p>
+</div>
+<div id="ref-Margaret_OConnor">
+<p><span class="smallcaps">Cargill, M.</span>, and <span class="smallcaps">P. O’Connor</span>. 2011. Writing scientific research articles: Strategy and steps. Wiley-Blackwell.</p>
+</div>
+<div id="ref-Fox2015">
+<p><span class="smallcaps">Fox, C.W.</span>, and <span class="smallcaps">C.S. Burns</span>. 2015. The relationship between manuscript title structure and success: Editorial decisions and citation performance for an ecological journal. <em>Ecology and Evolution</em> 5: 1970–1980. Available at: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.1480">https://onlinelibrary.wiley.com/doi/abs/10.1002/ece3.1480</a>.</p>
+</div>
+</div>
+</div>
+<div id="appendix-appendix" class="section level1 unnumbered">
+<h1>Appendix</h1>
+</div>
+<div id="appendix-1" class="section level1">
+<h1><span class="header-section-number">A</span> Appendix 1</h1>
+<p>Citations of all R packages used to generate this report.</p>
+<pre class="r"><code>library(&quot;knitcitations&quot;)
+cleanbib()
+options(citation_format = &quot;pandoc&quot;)
+read.bibtex(file = &quot;packages.bib&quot;)</code></pre>
+<p>[1] J. Allaire, Y. Xie, J. McPherson, et al. <em>rmarkdown: Dynamic
+Documents for R</em>. R package version 2.3. 2020. &lt;URL:
+<a href="https://github.com/rstudio/rmarkdown" class="uri">https://github.com/rstudio/rmarkdown</a>&gt;.</p>
+<p>[2] S. M. Bache and H. Wickham. <em>magrittr: A Forward-Pipe Operator for
+R</em>. R package version 1.5. 2014. &lt;URL:
+<a href="https://CRAN.R-project.org/package=magrittr" class="uri">https://CRAN.R-project.org/package=magrittr</a>&gt;.</p>
+<p>[3] C. Boettiger. <em>knitcitations: Citations for Knitr Markdown Files</em>.
+R package version 1.0.10. 2019. &lt;URL:
+<a href="https://github.com/cboettig/knitcitations" class="uri">https://github.com/cboettig/knitcitations</a>&gt;.</p>
+<p>[4] J. Cheng, C. Sievert, W. Chang, et al. <em>htmltools: Tools for HTML</em>.
+R package version 0.5.0. 2020. &lt;URL:
+<a href="https://github.com/rstudio/htmltools" class="uri">https://github.com/rstudio/htmltools</a>&gt;.</p>
+<p>[5] Y. Qiu. <em>prettydoc: Creating Pretty Documents from R Markdown</em>. R
+package version 0.3.1. 2019. &lt;URL:
+<a href="https://github.com/yixuan/prettydoc" class="uri">https://github.com/yixuan/prettydoc</a>&gt;.</p>
+<p>[6] R Core Team. <em>R: A Language and Environment for Statistical
+Computing</em>. R Foundation for Statistical Computing. Vienna, Austria,
+2019. &lt;URL: <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>&gt;.</p>
+<p>[7] K. Ren and K. Russell. <em>formattable: Create Formattable Data
+Structures</em>. R package version 0.2.0.1. 2016. &lt;URL:
+<a href="https://CRAN.R-project.org/package=formattable" class="uri">https://CRAN.R-project.org/package=formattable</a>&gt;.</p>
+<p>[8] H. Wickham and J. Bryan. <em>usethis: Automate Package and Project
+Setup</em>. R package version 1.5.1. 2019. &lt;URL:
+<a href="https://CRAN.R-project.org/package=usethis" class="uri">https://CRAN.R-project.org/package=usethis</a>&gt;.</p>
+<p>[9] H. Wickham, R. François, L. Henry, et al. <em>dplyr: A Grammar of Data
+Manipulation</em>. R package version 0.8.3. 2019. &lt;URL:
+<a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>&gt;.</p>
+<p>[10] H. Wickham, J. Hester, and W. Chang. <em>devtools: Tools to Make
+Developing R Packages Easier</em>. R package version 2.2.1. 2019. &lt;URL:
+<a href="https://github.com/r-lib/devtools" class="uri">https://github.com/r-lib/devtools</a>&gt;.</p>
+<p>[11] Y. Xie. <em>bookdown: Authoring Books and Technical Documents with R
+Markdown</em>. ISBN 978-1138700109. Boca Raton, Florida: Chapman and
+Hall/CRC, 2016. &lt;URL: <a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>&gt;.</p>
+<p>[12] Y. Xie. <em>bookdown: Authoring Books and Technical Documents with R
+Markdown</em>. R package version 0.20. 2020. &lt;URL:
+<a href="https://github.com/rstudio/bookdown" class="uri">https://github.com/rstudio/bookdown</a>&gt;.</p>
+<p>[13] Y. Xie. <em>Dynamic Documents with R and knitr</em>. 2nd. ISBN
+978-1498716963. Boca Raton, Florida: Chapman and Hall/CRC, 2015. &lt;URL:
+<a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>&gt;.</p>
+<p>[14] Y. Xie. “knitr: A Comprehensive Tool for Reproducible Research in
+R”. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V.
+Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and
+Hall/CRC, 2014. &lt;URL:
+<a href="http://www.crcpress.com/product/isbn/9781466561595" class="uri">http://www.crcpress.com/product/isbn/9781466561595</a>&gt;.</p>
+<p>[15] Y. Xie. <em>knitr: A General-Purpose Package for Dynamic Report
+Generation in R</em>. R package version 1.30. 2020. &lt;URL:
+<a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>&gt;.</p>
+<p>[16] Y. Xie, J. Allaire, and G. Grolemund. <em>R Markdown: The Definitive
+Guide</em>. ISBN 9781138359338. Boca Raton, Florida: Chapman and Hall/CRC,
+2018. &lt;URL: <a href="https://bookdown.org/yihui/rmarkdown" class="uri">https://bookdown.org/yihui/rmarkdown</a>&gt;.</p>
+<p>[17] H. Zhu. <em>kableExtra: Construct Complex Table with kable and Pipe
+Syntax</em>. R package version 1.1.0. 2019. &lt;URL:
+<a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a>&gt;.</p>
+</div>
+<div id="appendix-2" class="section level1">
+<h1><span class="header-section-number">B</span> Appendix 2</h1>
+<p>Version information about R, the operating system (OS) and attached or R loaded packages. This appendix was generated using <code>sessionInfo()</code>.</p>
+<pre><code>## R version 3.6.1 (2019-07-05)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Mojave 10.14.6
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] devtools_2.2.1       usethis_1.5.1        knitcitations_1.0.10
+##  [4] htmltools_0.5.0      prettydoc_0.3.1      magrittr_1.5        
+##  [7] dplyr_0.8.3          kableExtra_1.1.0     formattable_0.2.0.1 
+## [10] bookdown_0.20        rmarkdown_2.3        knitr_1.30          
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.5        lubridate_1.7.9   prettyunits_1.1.1 ps_1.3.0         
+##  [5] assertthat_0.2.1  rprojroot_1.3-2   digest_0.6.25     R6_2.4.1         
+##  [9] plyr_1.8.5        backports_1.1.10  evaluate_0.14     httr_1.4.1       
+## [13] pillar_1.4.3      rlang_0.4.7       rstudioapi_0.11   callr_3.4.1      
+## [17] desc_1.2.0        webshot_0.5.2     RefManageR_1.2.12 readr_1.3.1      
+## [21] stringr_1.4.0     htmlwidgets_1.5.1 munsell_0.5.0     compiler_3.6.1   
+## [25] xfun_0.17         pkgconfig_2.0.3   pkgbuild_1.0.6    tidyselect_0.2.5 
+## [29] tibble_2.1.3      codetools_0.2-16  fansi_0.4.1       viridisLite_0.3.0
+## [33] crayon_1.3.4      withr_2.1.2       jsonlite_1.7.1    lifecycle_0.1.0  
+## [37] formatR_1.7       scales_1.1.1      bibtex_0.4.2.2    cli_2.0.1        
+## [41] stringi_1.5.3     fs_1.3.1          remotes_2.1.0     testthat_2.3.1   
+## [45] xml2_1.3.2        ellipsis_0.3.1    generics_0.0.2    vctrs_0.3.4      
+## [49] tools_3.6.1       glue_1.4.2        purrr_0.3.3       hms_0.5.3        
+## [53] processx_3.4.1    pkgload_1.0.2     yaml_2.2.1        colorspace_1.4-1 
+## [57] sessioninfo_1.1.1 rvest_0.3.5       memoise_1.1.0</code></pre>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

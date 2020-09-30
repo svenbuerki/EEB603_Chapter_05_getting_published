@@ -1,0 +1,44 @@
+---
+title: 'EEB603 -- Chapter 5: Getting published'
+author: "Sven Buerki"
+date: "Boise State University"
+---
+
+# Learning outcomes
+
+In this chapter, students will learn about:
+
+- Best-practices to communicate their research and write scientific articles tailored to biological journals.
+- Peer-review process involved in publishing biological research.
+
+# Overview of content
+
+This website is associated to EEB603 - Reproducible Science and covers material presented in Chapter 5, Getting published.
+
+Overall, the steps towards getting your research published are:
+
+- **Step 1:** Selecting your journal.
+  + Journal aims and scope.
+  + Editors and editorial boards.
+  + Impact factor and other metrics.
+  + Open access.
+  + Author guidelines.
+  + Time to publication.
+  + Ethics.
+  + Authorship.
+- **Step 2:** Writing your manuscript.
+  + Planning to write.
+  + Structure.
+  + Title.
+  + Abstract.
+  + Writing style.
+  + Keywords.
+  + References
+  + Figures and tables.
+  + Editing.
+- **Step 3:** Submitting your manuscript.
+  + Cover letters.
+  + Handling revisions.
+  + Handling rejection.
+  + Appeals.
+- **Step 4:** Acceptance and publication.
