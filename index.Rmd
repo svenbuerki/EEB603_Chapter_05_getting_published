@@ -2,6 +2,12 @@
 title: 'EEB603 -- Chapter 5: Getting published'
 author: "Sven Buerki"
 date: "Boise State University"
+output:
+  bookdown::html_document2: 
+    toc: TRUE
+    toc_float: TRUE
+link-citations: yes
+fontsize: 12pt
 ---
 
 # Learning outcomes
@@ -42,3 +48,9 @@ Overall, the steps towards getting your research published are:
   + Handling rejection.
   + Appeals.
 - **Step 4:** Acceptance and publication.
+
+# Presentation
+
+The `pdf` of the presentation is available here:
+
+![](./Chapter_5_Getting_published.pdf){width=100% height=400}
